@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Bloodhearts</title>
-  <!-- Load Cooper Black font -->
   <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap" rel="stylesheet">
   <style>
-    /* Reset default margins */
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
@@ -17,32 +16,32 @@
     body {
       background-color: #000; /* black background */
       display: flex;
-      justify-content: center; /* horizontal centering */
-      align-items: center;     /* vertical centering */
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       min-height: 100vh;
       font-family: 'Cooper Black', serif;
+      text-align: center;
     }
 
     .container {
-      position: relative;
-      text-align: center;
       width: 90%;
-      max-width: 500px; /* limits oversized images on large screens */
+      max-width: 500px;
+      position: relative;
     }
 
-    /* Main Logo */
+    /* Logo */
     .logo {
       width: 100%;
       height: auto;
       display: block;
-      margin-bottom: 40px; /* space between logo and icons */
+      margin: 0 auto 40px; /* center + spacing */
     }
 
-    /* Icon Links */
+    /* Icons */
     .icon-link {
       display: inline-block;
-      margin: 15px;
+      margin: 10px;
       border-radius: 50%;
       padding: 10px;
       background-color: rgba(0, 0, 0, 0.3);
@@ -58,22 +57,19 @@
       display: block;
     }
 
-    .icon-link:hover {
-      transform: scale(1.15);
-    }
+    .icon-link:hover { transform: scale(1.15); }
+    .icon-link.red:hover { box-shadow: 0 0 15px rgba(255,0,0,0.7); }
+    .icon-link.yellow:hover { box-shadow: 0 0 15px rgba(255,165,0,0.7); }
+    .icon-link.green:hover { box-shadow: 0 0 15px rgba(193,53,132,0.7); }
 
-    .icon-link.red:hover { box-shadow: 0 0 15px rgba(255, 0, 0, 0.7); }
-    .icon-link.yellow:hover { box-shadow: 0 0 15px rgba(255, 165, 0, 0.7); }
-    .icon-link.green:hover { box-shadow: 0 0 15px rgba(193, 53, 132, 0.7); }
-
-    /* Tooltip styling */
+    /* Tooltips */
     .icon-link::after {
       content: attr(data-label);
       position: absolute;
       bottom: 70px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0,0,0,0.7);
       color: #fff;
       padding: 6px 12px;
       border-radius: 6px;
@@ -84,47 +80,36 @@
       white-space: nowrap;
     }
 
-    .icon-link:hover::after {
-      opacity: 1;
-    }
+    .icon-link:hover::after { opacity: 1; }
 
     /* Responsive adjustments */
     @media (max-width: 600px) {
-      .logo {
-        width: 80%;
-        margin-bottom: 30px;
-      }
-      .icon-link svg {
-        width: 36px;
-        height: 36px;
-      }
-      .icon-link::after {
-        font-size: 14px;
-        bottom: 60px;
-      }
+      .logo { width: 80%; margin-bottom: 30px; }
+      .icon-link svg { width: 36px; height: 36px; }
+      .icon-link::after { font-size: 14px; bottom: 60px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Main Logo -->
-    <img src="TBH NEW (THICKER).png" alt="The Bloodhearts Logo" class="logo">
+    <!-- Logo -->
+    <img src="TBH NEW (THICKER).jpg" alt="The Bloodhearts Logo" class="logo">
 
-    <!-- YouTube Icon -->
+    <!-- YouTube -->
     <a href="https://www.youtube.com/@thebloodhearts" target="_blank" class="icon-link red" data-label="YouTube">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000">
         <path d="M23.498 6.186a2.99 2.99 0 0 0-2.106-2.117C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.392.569A2.99 2.99 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.99 2.99 0 0 0 2.106 2.117C4.5 20.5 12 20.5 12 20.5s7.5 0 9.392-.569a2.99 2.99 0 0 0 2.106-2.117C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
       </svg>
     </a>
 
-    <!-- SoundCloud Icon -->
+    <!-- SoundCloud -->
     <a href="https://soundcloud.com/thebloodhearts" target="_blank" class="icon-link yellow" data-label="SoundCloud">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF8800">
         <path d="M17.5 9.5c-1.1 0-2.1.4-2.9 1.1-.3-2.3-2.3-4.1-4.7-4.1-2.6 0-4.8 2.1-4.8 4.8 0 .3 0 .6.1.9-1.6.3-2.8 1.7-2.8 3.4 0 1.9 1.5 3.4 3.4 3.4h11.7c2.1 0 3.8-1.7 3.8-3.8s-1.7-3.8-3.8-3.8z"/>
       </svg>
     </a>
 
-    <!-- Instagram Icon -->
+    <!-- Instagram -->
     <a href="https://www.instagram.com/thebloodhearts" target="_blank" class="icon-link green" data-label="Instagram">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <defs>
